@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="anchorWelcome" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject_jeff_pottruff.Window1Controller">
+    <stylesheets>
+        <URL value="@window1.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="421.0" layoutX="-74.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pizzaEye.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="692.0" layoutX="29.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="216.0" fitWidth="464.0" layoutX="257.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/welcomeText.png" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="467.0" layoutY="385.0" onMouseClicked="#show3" prefHeight="200.0" prefWidth="200.0" styleClass="menu">
+         <center>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../images/sides.jpg" />
+               </image>
+            </ImageView>
+         </center>
+         <bottom>
+            <Label text="Add Sides" textFill="WHITE" BorderPane.alignment="CENTER" />
+         </bottom>
+         <left>
+            <FlowPane prefHeight="172.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <FlowPane prefHeight="159.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <FlowPane prefHeight="10.0" prefWidth="223.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+      <BorderPane layoutX="187.0" layoutY="383.0" onMouseClicked="#show2" prefHeight="204.0" prefWidth="269.0" styleClass="menu">
+         <bottom>
+            <Label text="Add Pizzas" textFill="WHITE" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../images/pizzaMenu.jpg" />
+               </image>
+            </ImageView>
+         </center>
+         <left>
+            <FlowPane prefHeight="172.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <FlowPane prefHeight="159.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <FlowPane prefHeight="10.0" prefWidth="223.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

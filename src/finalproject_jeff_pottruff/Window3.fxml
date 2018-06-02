@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject_jeff_pottruff.Window3Controller">
+    <stylesheets>
+        <URL value="@window3.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="36.0" styleClass="heading" text="Add Your Sides!" />
+      <Button layoutX="457.0" layoutY="38.0" mnemonicParsing="false" onAction="#show4" styleClass="checkOut" text="Checkout" />
+      <GridPane layoutX="88.0" layoutY="104.0" styleClass="sideSelections">
+         <children>
+            <Label styleClass="title" text="Garlic Bread" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Label>
+            <ImageView fitHeight="115.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/garlicBread.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="94.0" fitWidth="98.0" onMouseClicked="#addCrazySticks" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/crazySticks.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="71.0" fitWidth="106.0" onMouseClicked="#addPotatoWedges" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/potatoWedges.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="title" text="Crazy Sticks" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin></Label>
+            <Label styleClass="title" text="Potato Wedges" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Label>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <children>
+                  <Button fx:id="rmgb" disable="true" mnemonicParsing="false" onAction="#removeGarlicBread" text="-">
+                     <FlowPane.margin>
+                        <Insets left="15.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="side1added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addGarlicBread" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Button fx:id="rmcs" disable="true" mnemonicParsing="false" onAction="#removeCrazySticks" text="-">
+                     <FlowPane.margin>
+                        <Insets left="20.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="side2added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addCrazySticks" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Button fx:id="rmpw" disable="true" mnemonicParsing="false" onAction="#removePotatoWedges" text="-">
+                     <FlowPane.margin>
+                        <Insets left="20.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="side3added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addPotatoWedges" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="114.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="127.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="131.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="23.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="83.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="88.0" layoutY="262.0" prefHeight="131.0" prefWidth="604.0" styleClass="drinkSelections">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="97.0" onMouseClicked="#addDrink2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/coke.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="84.0" fitWidth="155.0" onMouseClicked="#addDrink3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/gingerale.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="84.0" fitWidth="122.0" onMouseClicked="#addDrink4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/fanta.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="87.0" fitWidth="146.0" onMouseClicked="#addDrink5" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/icedtea.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="121.0" fitWidth="84.0" onMouseClicked="#addDrink1" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/barqs.png" />
+               </image>
+            </ImageView>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="rmdr1" disable="true" mnemonicParsing="false" onAction="#removeDrink1" text="-">
+                     <FlowPane.margin>
+                        <Insets left="15.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dr1added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDrink1" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="rmdr2" disable="true" mnemonicParsing="false" onAction="#removeDrink2" text="-">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dr2added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDrink2" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="rmdr3" disable="true" mnemonicParsing="false" onAction="#removeDrink3" text="-">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dr3added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDrink3" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="rmdr4" disable="true" mnemonicParsing="false" onAction="#removeDrink4" text="-">
+                     <FlowPane.margin>
+                        <Insets left="25.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dr4added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDrink4" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="rmdr5" disable="true" mnemonicParsing="false" onAction="#removeDrink5" text="-">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dr5added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDrink5" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="114.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="102.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="118.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0" prefWidth="117.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="142.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="23.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="83.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="88.0" layoutY="420.0" prefHeight="163.0" prefWidth="624.0" styleClass="dipSelections">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="111.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="113.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="128.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="117.0" fitWidth="110.0" onMouseClicked="#addDip1" pickOnBounds="true" preserveRatio="true" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/bbqDip.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="110.0" onMouseClicked="#addDip2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/garlicDip.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="110.0" onMouseClicked="#addDip3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/marinaraDip.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="110.0" onMouseClicked="#addDip4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/ranchDip.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="117.0" fitWidth="110.0" onMouseClicked="#addDip5" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/spicyDip.png" />
+               </image>
+            </ImageView>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="rmdp1" disable="true" mnemonicParsing="false" onAction="#removeDip1" text="-">
+                     <FlowPane.margin>
+                        <Insets left="25.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dip1added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDip1" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="rmdp2" disable="true" mnemonicParsing="false" onAction="#removeDip2" text="-">
+                     <FlowPane.margin>
+                        <Insets left="27.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dip2added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDip2" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="rmdp3" disable="true" mnemonicParsing="false" onAction="#removeDip3" text="-">
+                     <FlowPane.margin>
+                        <Insets left="27.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dip3added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDip3" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="rmdp4" disable="true" mnemonicParsing="false" onAction="#removeDip4" text="-">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dip4added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDip4" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="rmdp5" disable="true" mnemonicParsing="false" onAction="#removeDip5" text="-">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin></Button>
+                  <Label fx:id="dip5added" styleClass="counter" text=" - " />
+                  <Button mnemonicParsing="false" onAction="#addDip5" text="+">
+                     <padding>
+                        <Insets bottom="4.0" left="4.5" right="4.5" top="4.0" />
+                     </padding></Button>
+               </children>
+            </FlowPane>
+         </children>
+      </GridPane>
+      <StackPane layoutX="239.0" layoutY="26.0" onMouseClicked="#show1" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label text="MAIN&#10;MENU" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="341.0" layoutY="26.0" onMouseClicked="#show2" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label onMouseClicked="#show2" text=" ADD&#10;PIZZAS" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="12.0" layoutY="475.0" prefHeight="26.0" prefWidth="54.0" styleClass="blur">
+         <children>
+            <Label prefHeight="26.0" prefWidth="45.0" styleClass="subheading" text="Dips" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="3.0" layoutY="321.0" prefHeight="24.0" prefWidth="73.0" styleClass="blur">
+         <children>
+            <Label prefHeight="24.0" prefWidth="66.0" styleClass="subheading" text="Drinks" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="12.0" layoutY="154.0" prefHeight="24.0" prefWidth="54.0" styleClass="blur">
+         <children>
+            <Label prefHeight="24.0" prefWidth="64.0" styleClass="subheading" text="Sides" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

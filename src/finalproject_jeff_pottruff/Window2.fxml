@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject_jeff_pottruff.Window2Controller">
+    <stylesheets>
+        <URL value="@window2.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="483.0" layoutY="16.0" mnemonicParsing="false" onAction="#show4" text="Checkout" />
+      <Button layoutX="582.0" layoutY="498.0" mnemonicParsing="false" onAction="#addPizzaToList" text="Add Pizza" />
+      <Label layoutX="14.0" layoutY="10.0" styleClass="heading" text="Create Your Pizza!" />
+      <GridPane layoutX="89.0" layoutY="233.0" styleClass="meat">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="27.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="0.0" prefWidth="36.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="31.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="ham" mnemonicParsing="false" onAction="#setVariables" text="Ham" GridPane.rowIndex="1" />
+            <CheckBox fx:id="pepperoni" mnemonicParsing="false" onAction="#setVariables" text="Pepperoni" GridPane.rowIndex="2" />
+            <RadioButton fx:id="hamLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rmeat2" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="hamRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rmeat2" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <RadioButton fx:id="hamAll" mnemonicParsing="false" onAction="#setVariables" prefHeight="17.0" prefWidth="18.0" toggleGroup="$rmeat2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <RadioButton fx:id="pepperoniLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rmeat3" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="pepperoniAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rmeat3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton fx:id="pepperoniRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rmeat3" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <CheckBox fx:id="prosciutto" mnemonicParsing="false" onAction="#setVariables" text="Prosciutto" GridPane.columnIndex="5" />
+            <CheckBox fx:id="sausage" mnemonicParsing="false" onAction="#setVariables" text="Sausage" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <RadioButton fx:id="baconLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rmeat1" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="baconAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rmeat1" GridPane.columnIndex="2" />
+            <RadioButton fx:id="baconRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rmeat1" GridPane.columnIndex="3" />
+            <RadioButton fx:id="prosciuttoLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pmeat1" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="prosciuttoAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pmeat1" GridPane.columnIndex="7" />
+            <RadioButton fx:id="prosciuttoRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pmeat1" GridPane.columnIndex="8" />
+            <RadioButton fx:id="sausageLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pmeat2" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="sausageAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pmeat2" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <RadioButton fx:id="sausageRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pmeat2" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <CheckBox fx:id="bacon" mnemonicParsing="false" onAction="#setVariables" text="Bacon" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="89.0" layoutY="353.0" styleClass="veg">
+         <children>
+            <CheckBox fx:id="onions" mnemonicParsing="false" onAction="#setVariables" text="Onions" GridPane.rowIndex="3" />
+            <CheckBox fx:id="mushrooms" mnemonicParsing="false" onAction="#setVariables" text="Mushrooms" GridPane.rowIndex="1" />
+            <CheckBox fx:id="olives" mnemonicParsing="false" onAction="#setVariables" text="Olives" GridPane.rowIndex="2" />
+            <RadioButton fx:id="mushroomsLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rveg2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mushroomsRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg2" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <RadioButton fx:id="mushroomsAll" mnemonicParsing="false" onAction="#setVariables" prefHeight="17.0" prefWidth="18.0" toggleGroup="$rveg2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <RadioButton fx:id="olivesLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rveg3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="olivesAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton fx:id="olivesRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg3" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <RadioButton fx:id="onionsLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rveg4" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="onionsAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg4" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <RadioButton fx:id="onionsRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg4" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <CheckBox fx:id="broccoli" mnemonicParsing="false" onAction="#setVariables" text="Broccoli" />
+            <CheckBox fx:id="artichokes" mnemonicParsing="false" onAction="#setVariables" text="Artichokes" GridPane.columnIndex="5" />
+            <CheckBox fx:id="kale" mnemonicParsing="false" onAction="#setVariables" text="Kale" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <CheckBox fx:id="rapini" mnemonicParsing="false" onAction="#setVariables" text="Rapini" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <RadioButton fx:id="broccoliLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rveg1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="broccoliAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg1" GridPane.columnIndex="2" />
+            <RadioButton fx:id="broccoliRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg1" GridPane.columnIndex="3" />
+            <RadioButton fx:id="artichokesLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pveg1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="artichokesAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg1" GridPane.columnIndex="7" />
+            <RadioButton fx:id="artichokesRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg1" GridPane.columnIndex="8" />
+            <RadioButton fx:id="kaleLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pveg2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="kaleAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg2" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <RadioButton fx:id="kaleRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg2" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <RadioButton fx:id="rapiniLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pveg3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rapiniAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg3" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <RadioButton fx:id="rapiniRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg3" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <RadioButton fx:id="peppersLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rveg5" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="peppersAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg5" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton fx:id="peppersRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg5" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <RadioButton fx:id="tomatoesLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rveg6" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="tomatoesAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg6" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <RadioButton fx:id="tomatoesRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$rveg6" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <RadioButton fx:id="sundriedLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pveg4" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="sundriedAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$pveg4" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <RadioButton fx:id="sundriedRS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="8" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pveg5" />
+               </toggleGroup>
+            </RadioButton>
+            <CheckBox fx:id="peppers" mnemonicParsing="false" onAction="#setVariables" text="Peppers" GridPane.rowIndex="4" />
+            <CheckBox fx:id="tomatoes" mnemonicParsing="false" onAction="#setVariables" text="Tomatoes" GridPane.rowIndex="5" />
+            <CheckBox fx:id="sundried" mnemonicParsing="false" onAction="#setVariables" prefHeight="38.0" prefWidth="74.0" text="Sundried&#10;Tomatoes" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="27.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="0.0" prefWidth="36.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="31.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="9.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="89.0" layoutY="527.0" styleClass="free">
+         <children>
+            <CheckBox fx:id="garlic" mnemonicParsing="false" text="Garlic" GridPane.rowIndex="1" />
+            <RadioButton fx:id="garlicLS" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="free3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="garlicRS" mnemonicParsing="false" toggleGroup="$free3" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <RadioButton fx:id="garlicAll" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" toggleGroup="$free3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <CheckBox fx:id="chili" mnemonicParsing="false" text="Chili Flakes" GridPane.columnIndex="5" />
+            <CheckBox fx:id="oregano" mnemonicParsing="false" text="Oregano" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <RadioButton fx:id="basilLS" mnemonicParsing="false" GridPane.columnIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="free1" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="basilAll" mnemonicParsing="false" toggleGroup="$free1" GridPane.columnIndex="2" />
+            <RadioButton fx:id="basilRS" mnemonicParsing="false" toggleGroup="$free1" GridPane.columnIndex="3" />
+            <RadioButton fx:id="chiliLS" mnemonicParsing="false" GridPane.columnIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="free2" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="chiliAll" mnemonicParsing="false" toggleGroup="$free2" GridPane.columnIndex="7" />
+            <RadioButton fx:id="chiliRS" mnemonicParsing="false" toggleGroup="$free2" GridPane.columnIndex="8" />
+            <RadioButton fx:id="oreganoLS" mnemonicParsing="false" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="free4" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="oreganoAll" mnemonicParsing="false" toggleGroup="$free4" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <RadioButton fx:id="oreganoRS" mnemonicParsing="false" toggleGroup="$free4" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <CheckBox fx:id="basil" mnemonicParsing="false" text="Basil" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="27.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="0.0" prefWidth="36.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="31.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="regularToppingsPrice" layoutX="154.0" layoutY="214.0" styleClass="toppingPrice" text="(select size to view price)" />
+      <Label fx:id="premiumToppingsPrice" layoutX="383.0" layoutY="214.0" styleClass="toppingPrice" text="(select size to view price)" />
+      <Label fx:id="pizzaTotal" layoutX="500.0" layoutY="397.0" styleClass="currentTotal" text="Current Pizza Total:&#10;$0.00" textAlignment="CENTER" />
+      <GridPane layoutX="89.0" layoutY="320.0" styleClass="fish">
+         <children>
+            <RadioButton fx:id="anchovyLS" mnemonicParsing="false" onAction="#setVariables" GridPane.columnIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="fish1" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="anchovyAll" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$fish1" GridPane.columnIndex="2" />
+            <RadioButton fx:id="anchovyRS" mnemonicParsing="false" onAction="#setVariables" toggleGroup="$fish1" GridPane.columnIndex="3" />
+            <CheckBox mnemonicParsing="false" />
+            <CheckBox fx:id="anchovies" mnemonicParsing="false" onAction="#setVariables" text="Anchovies" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="27.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="0.0" prefWidth="36.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="31.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="617.0" layoutY="417.0" />
+      <GridPane layoutX="89.0" layoutY="85.0" prefHeight="35.0" prefWidth="387.0" styleClass="sizeSelect">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="83.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="82.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="206.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="small" mnemonicParsing="false" onAction="#setVariables" selected="true" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="size" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="medium" mnemonicParsing="false" onAction="#setVariables" text="Medium" toggleGroup="$size" GridPane.columnIndex="1" />
+            <RadioButton fx:id="large" mnemonicParsing="false" onAction="#setVariables" text="Large" toggleGroup="$size" GridPane.columnIndex="2" />
+            <RadioButton mnemonicParsing="false" onAction="#setVariables" text="Extra Large" toggleGroup="$size" GridPane.columnIndex="3" fx:id="xl" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="89.0" layoutY="157.0" prefHeight="35.0" prefWidth="387.0" styleClass="crustSelect">
+         <children>
+            <RadioButton fx:id="regular" mnemonicParsing="false" onAction="#setVariables" selected="true" text="Regular">
+               <toggleGroup>
+                  <ToggleGroup fx:id="crust" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="thin" mnemonicParsing="false" onAction="#setVariables" text="Thin" toggleGroup="$crust" GridPane.columnIndex="1" />
+            <RadioButton fx:id="stuffed" mnemonicParsing="false" onAction="#setVariables" text="Stuffed" toggleGroup="$crust" GridPane.columnIndex="2" />
+            <Label fx:id="stuffedPrice" prefHeight="17.0" prefWidth="144.0" styleClass="crustPrice" text="(select size to view price)" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="85.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="85.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="69.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="166.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button layoutX="486.0" layoutY="557.0" mnemonicParsing="false" onAction="#resetWindow" text="Reset" />
+      <StackPane layoutX="527.0" layoutY="170.0" prefHeight="213.0" prefWidth="215.0" styleClass="blur2">
+         <children>
+            <ImageView fitHeight="213.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pizza.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="anchovyL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/anchovyL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="anchovyR" fitHeight="210.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/anchovyR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="baconL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/baconL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="baconR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/baconR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hamL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/hamL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hamR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/hamR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pepperoniL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/pepperoniL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pepperoniR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/pepperoniR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="broccoliL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/broccoliL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="broccoliR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/broccoliR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="mushroomsL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/mushroomL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="mushroomsR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/mushroomR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="olivesL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/olivesL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="olivesR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/olivesR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="onionsL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/onionsL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="onionsR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/onionsR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="peppersL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/peppersL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="peppersR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/peppersR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tomatoesL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/tomatoesL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tomatoesR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/tomatoesR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="prosciuttoL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/prosciuttoL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="prosciuttoR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/prosciuttoR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sausageL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/sausageL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sausageR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/sausageR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="artichokesL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/artichokeL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="artichokesR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/artichokeR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="kaleL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/kaleL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="kaleR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/kaleR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rapiniL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/rapiniL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rapiniR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/rapiniR.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sundriedL" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/sundriedL.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sundriedR" fitHeight="211.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/toppings/sundriedR.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Label layoutX="303.0" layoutY="209.0" styleClass="title" text="Premium" />
+      <Label layoutX="80.0" layoutY="209.0" styleClass="title" text="Regular" />
+      <StackPane layoutX="4.0" layoutY="88.0" prefHeight="30.0" prefWidth="72.0" styleClass="blur">
+         <children>
+            <Label styleClass="subheading" text="Size" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="1.0" layoutY="160.0" prefHeight="30.0" prefWidth="84.0" styleClass="blur">
+         <children>
+            <Label styleClass="subheading" text="Crust" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="5.0" layoutY="252.0" prefHeight="96.0" prefWidth="75.0" styleClass="blur">
+         <children>
+            <Label styleClass="subheading" text="Meat&#10;&amp;&#10;Fish" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="10.0" layoutY="428.0" prefHeight="24.0" prefWidth="55.0" styleClass="blur">
+         <children>
+            <Label styleClass="subheading" text="Veg" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="10.0" layoutY="534.0" prefHeight="25.0" prefWidth="60.0" styleClass="blur">
+         <children>
+            <Label styleClass="subheading" text="Free " />
+         </children>
+      </StackPane>
+      <StackPane layoutX="537.0" layoutY="120.0" prefHeight="30.0" prefWidth="196.0">
+         <children>
+            <Label fx:id="circumference" styleClass="subheading" text="| - - - - -    12&quot;  - - - - - |" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="274.0" layoutY="4.0" onMouseClicked="#show1" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label text="MAIN&#10;MENU" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="375.0" layoutY="4.0" onMouseClicked="#show3" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label text="ADD&#10;SIDES" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

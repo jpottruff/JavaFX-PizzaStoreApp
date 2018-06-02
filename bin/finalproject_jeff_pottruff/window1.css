@@ -1,0 +1,40 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.anchorWelcome {
+    -fx-background-image: url("/images/welcome4.jpg");
+
+}
+
+
+.menu {
+    
+    -fx-background-color: black;
+    -fx-border-color: gray;
+    -fx-border-width: 5;
+    -fx-font-family: "Bauhaus 93";
+    -fx-font-style: italic;
+    
+    -fx-font-size: 16pt;
+    
+}
+
+.menu:hover {
+    -fx-border-color: white;
+    -fx-border-width: 5;
+}
+
+
+.button {
+    -fx-background-color: red;
+    -fx-background-radius: 6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    
+    -fx-border-insets:-1;
+    -fx-border-width: 5;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+}

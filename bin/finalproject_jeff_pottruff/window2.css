@@ -1,0 +1,155 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+        -fx-font-family: "Bauhaus 93";
+        -fx-background-image: url("/images/welcome3.jpg");
+        -fx-background-size: cover;
+
+}
+.blur, .blur2 {
+        -fx-background-color: rgba(150, 150, 150, 0.7);
+        -fx-border-radius: 100 100 100 100;
+        -fx-background-radius: 100 100 100 100;
+}
+
+.blur2 {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heading {
+
+    -fx-text-fill: darkred;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-font-size: 20pt;
+}
+.subheading {
+
+    -fx-text-fill: gray;
+    -fx-font-weight: bold;
+    -fx-font-size: 16pt;
+}
+.menu {
+    -fx-background-color: gray;
+    -fx-border-color: black;
+    -fx-border-width: 5;
+}
+
+.menu:hover {
+    
+    -fx-border-color: white;
+    -fx-border-width: 5;
+}
+.button {
+    -fx-background-color: goldenrod;
+    
+    -fx-text-fill: black;
+    -fx-border-insets:-1;
+    -fx-border-width: 3;
+    -fx-border-color: darkred;
+    -fx-background-radius: 33;
+    -fx-border-radius: 30;
+}
+
+.subheading, .heading, .toppingPrice, .currentTotal, .cartTotal {
+    -fx-effect: dropshadow(gaussian, black, 5, 10, 0, 0);
+    -fx-background-insets: 25;
+}
+
+ .crustPrice {
+    -fx-effect: dropshadow(gaussian, rgba(150, 150, 150, 0.8), 5, 10, 0, 0);
+    -fx-background-insets: 25;  
+}
+
+.toppingPrice, .crustPrice, .currentTotal {
+    -fx-text-fill: yellow;  
+}
+
+.cartTotal {
+    -fx-text-fill: darkred;  
+    -fx-font-size: 14pt;
+}
+
+.currentTotal {
+    -fx-font-size: 20pt;
+}
+
+.check-box, .radio-button {
+    -fx-text-fill: lightgray;
+}
+
+.title {
+    -fx-font-size: 14pt;
+}
+.sizeSelect, .crustSelect {
+   -fx-background-color: black;
+   -fx-border-color: black;
+   -fx-border-width: 3;
+   -fx-border-radius: 15 15 15 15;
+   -fx-background-radius: 15 15 15 15;
+}
+
+.sizeSelect:hover, .crustSelect:hover {
+    -fx-border-color: gray;
+    -fx-border-width: 3;
+    -fx-border-radius: 15 15 15 15;
+    -fx-background-radius: 18 18 18 18;
+}
+.meat {
+   -fx-background-color: black;
+   -fx-border-color: black;
+   -fx-border-width: 3;
+   -fx-border-radius: 15 15 0 0;
+   -fx-background-radius: 15 15 0 0;
+   
+}
+.meat:hover {
+    -fx-border-color: red;
+    -fx-border-width: 3;
+    -fx-border-radius: 15 15 0 0;
+    -fx-background-radius: 15 15 0 0;
+}
+
+.fish {
+   -fx-background-color: black;
+   -fx-border-color: black;
+   -fx-border-width: 3;
+   
+}
+.fish:hover {
+    -fx-border-color: blue;
+    -fx-border-width: 3;
+}
+
+.veg {
+   -fx-background-color: black;
+   -fx-border-color: black;
+   -fx-border-width: 3;
+   
+}
+.veg:hover {
+    -fx-border-color: green;
+    -fx-border-width: 3;
+}
+
+.free {
+   -fx-background-color: black;
+   -fx-border-color: black;
+   -fx-border-width: 3;
+   -fx-border-radius: 0 0 15 15;
+   -fx-background-radius: 0 0 15 15;
+   
+}
+.free:hover {
+    -fx-border-color: yellow;
+    -fx-border-width: 3;
+    -fx-border-radius: 0 0 15 15;
+    -fx-background-radius: 0 0 15 15;
+}
+
+
+
+
+

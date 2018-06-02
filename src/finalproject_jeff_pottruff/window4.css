@@ -1,0 +1,63 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-font-family: "Bauhaus 93";
+    -fx-background-image: url("/images/welcome3.jpg");
+    -fx-background-size: cover;
+}
+
+.blur {
+        -fx-background-color: rgba(150, 150, 150, 0.7);
+        -fx-border-radius: 100 100 100 100;
+        -fx-background-radius: 100 100 100 100;
+}
+
+.heading {
+    -fx-text-fill: darkred;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-font-size: 20pt;
+}
+
+.subheading {
+    -fx-text-fill: gray;
+    -fx-font-weight: bold;
+    -fx-font-size: 16pt;
+}
+.heading, .subheading, .cartTotal {
+    
+    -fx-effect: dropshadow(gaussian, black, 5, 10, 0, 0);
+    -fx-background-insets: 25;
+}
+
+.menu {
+    -fx-background-color: gray;
+    -fx-border-color: black;
+    -fx-border-width: 5;
+}
+
+.menu:hover {
+    -fx-border-color: white;
+    -fx-border-width: 5;
+}
+
+.button {
+    -fx-background-color: goldenrod;
+    
+    -fx-text-fill: black;
+    -fx-border-insets:-1;
+    -fx-border-width: 3;
+    -fx-border-color: darkred;
+    -fx-background-radius: 33;
+    -fx-border-radius: 30;
+}
+
+.cart, .instructions {
+   -fx-background-color: black;
+   -fx-border-color: black;
+   -fx-border-width: 5;
+   -fx-border-radius: 5 5 5 5;
+   -fx-background-radius: 15 15 15 15;
+}

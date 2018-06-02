@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.anchor5 {
+    -fx-background-image: url("/images/thankYou3.jpg");
+    -fx-font-family: "Bauhaus 93";
+}
+
+.menu {
+    -fx-background-color: black;
+    -fx-border-color: darkred;
+    -fx-border-width: 5;
+}
+
+.menu:hover {
+    -fx-border-color: black;
+    -fx-border-width: 5;
+    -fx-background-color: darkred;
+}
+
+.label {
+    -fx-text-fill: gray;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject_jeff_pottruff.Window4Controller">
+    <stylesheets>
+        <URL value="@window4.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="23.0" layoutY="30.0" styleClass="heading" text="Confirm Order:" />
+      <Button layoutX="594.0" layoutY="541.0" mnemonicParsing="false" onAction="#show5" text="Confirm Order" />
+      <StackPane layoutX="375.0" layoutY="21.0" onMouseClicked="#show2" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label text="ADD&#10;PIZZAS" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="483.0" layoutY="21.0" onMouseClicked="#show3" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label text="ADD&#10;SIDES" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="262.0" layoutY="21.0" onMouseClicked="#show1" prefHeight="49.0" prefWidth="93.0" styleClass="menu">
+         <children>
+            <Label text="MAIN&#10;MENU" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="422.0" layoutY="182.0" prefHeight="30.0" prefWidth="197.0" styleClass="blur">
+         <children>
+            <Label prefHeight="33.0" prefWidth="187.0" styleClass="subheading" text="Special Instructions" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="23.0" layoutY="89.0" prefHeight="30.0" prefWidth="117.0" styleClass="blur">
+         <children>
+            <Label styleClass="subheading" text="Your Cart:" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="24.0" layoutY="137.0" prefHeight="442.0" prefWidth="275.0" styleClass="cart">
+         <children>
+            <ListView fx:id="currentCart" prefHeight="428.0" prefWidth="260.0" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="421.0" layoutY="225.0" prefHeight="234.0" prefWidth="300.0" styleClass="instructions">
+         <children>
+            <TextArea fx:id="comments" prefHeight="234.0" prefWidth="275.0" wrapText="true" />
+         </children>
+      </StackPane>
+      <Button layoutX="309.0" layoutY="185.0" mnemonicParsing="false" onAction="#addList" text="Update Cart" />
+      <Button layoutX="329.0" layoutY="379.0" mnemonicParsing="false" onAction="#removeItem" text="Remove" />
+   </children>
+</AnchorPane>
